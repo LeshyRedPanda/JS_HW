@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    // Масиви та об'єкти:
+
+
+    // 1) Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
+
+    // let arr1 = [ 'Labrador Retriever', 'German Shepherd','Golden Retriever','Bulldog','Beagle','Poodle','French Bulldog','Siberian Husky','Boxer','Dachshund']
+    // console.log(arr1);
+    // console.log(arr1[0]);
+    // console.log(arr1[1]);
+    // console.log(arr1[2]);
+    // console.log(arr1[3]);
+    // console.log(arr1[4]);
+    // console.log(arr1[5]);
+    // console.log(arr1[6]);
+    // console.log(arr1[7]);
+    // console.log(arr1[8]);
+    // console.log(arr1[9]);
+
+
+    // // 2) Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
+    //
+    // let bookCase1 = {
+    //     title:"The Great Gatsby" ,
+    //     pageCount:180 ,
+    //     genre:"Fiction" ,
+    // };
+    //
+    // let bookCase2 = {
+    //     title:"To Kill a Mockingbird",
+    //     pageCount: 281,
+    //     genre: "Novel",
+    // };
+    //
+    // let bookCase3 = {
+    //     title: "1984",
+    //     pageCount: 328,
+    //     genre: "Dystopian",
+    // };
+    // console.log(bookCase1);
+    // console.log(bookCase2);
+    // console.log(bookCase3);
+
+
+
+    // // 3) Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
+    //
+    // let bookCase4 = {
+    //     title:"The Great Gatsby" ,
+    //     pageCount:180 ,
+    //     genre:"Fiction" ,
+    //     authors : [
+    //         {name: "F. Scott Fitzgerald", age: 44}
+    //     ]
+    // };
+    //
+    // let bookCase5 = {
+    //     title:"To Kill a Mockingbird",
+    //     pageCount: 281,
+    //     genre: "Novel",
+    //     authors : [
+    //         {name: "Harper Lee", age:89 }
+    //     ]
+    // };
+    //
+    // let bookCase6 = {
+    //     title: "1984",
+    //     pageCount: 328,
+    //     genre: "Dystopian",
+    //     authors : [
+    //         {name: "George Orwell", age: 46}
+    //     ]
+    // };
+    //
+    //
+    // console.log(bookCase4);
+    // console.log(bookCase5);
+    // console.log(bookCase6);
+
+
+
+    // 4) Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
+    //
+    // let user1 = [
+    //     {name: 'Dave', username:'Dangerous' , password: 12345466565 },
+    //     {name: 'Cat' , username:'Carapka' , password: 'Meeeeeyaooo' },
+    //     {name: 'Bird' , username:'Woodpecker' , password: 'tyktyk2024' },
+    //     {name: 'Matt' , username:'Sniper' , password:12345676 },
+    //     {name: 'Andy' , username:'Phoenix' , password: 'hsdfspWOQmmc1mcks123'},
+    //     {name: 'Mike' , username:'Ghost' , password:12345667543 },
+    //     {name: 'Max' , username:'Blaze' , password: 'wgbfre3467hn2001'},
+    //     {name:'Olivia' , username:'Frost' , password:'dvfdiomv12312mkovmd' },
+    //     {name:'Sophia' , username:'Reaper' , password:546786357 },
+    //     {name:'James' , username:'Creepy' , password: "dfvfgkm1231FGBFB356"},
+    // ];
+    //
+    // console.log(user1[0].password);
+    // console.log(user1[1].password);
+    // console.log(user1[2].password);
+    // console.log(user1[3].password);
+    // console.log(user1[4].password);
+    // console.log(user1[5].password);
+    // console.log(user1[6].password);
+    // console.log(user1[7].password);
+    // console.log(user1[8].password);
+    // console.log(user1[9].password);
+
+
+
+    // Логічні розгалуження:
+
+    //     1) Є змінна х, якій ви надаєте довільне числове значення.
+    //     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+
+    // let a = 0;
+    // if ( a === 0) {
+    //     console.log('correct')
+    // }else {
+    //     console.log('not correct')
+    // };
+
+
+
+    // 2) Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
+    // (в першу, другу, третю или четверту частину години).
+
+    // let time = 442;
+    // if ( time === 0 || time <= 15 ) {
+    //     console.log('first quarter');
+    // }else if (time === 16 || time <= 30 ) {
+    //     console.log('second quarter');
+    // }else if ( time === 31 || time <= 45 ) {
+    //     console.log('third quarter');
+    // }else if (time === 46 || time <= 59) {
+    //     console.log('fourth quarter');
+    // }else {
+    //     console.log('time out')
+    // }
+
+
+
+    // 3) У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
+
+     // let day = 11;
+     // if (day === 1 || day <= 10) {
+     //     console.log('part one');
+     // }else if ( day === 11 || day <= 20) {
+     //     console.log('second part');
+     // }else if (day === 21 || day <=31) {
+     //     console.log('end part of the month');
+     // }else {
+     //       alert('there are only 31 days in a month!!!');
+     // }
+
+
+
+    // 4) Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
+
+
+    // let week = 1;
+    // switch (week) {
+    //     case 1:
+    //         console.log("Monday");
+    //         break;
+    //     case 2:
+    //         console.log('Tuesday');
+    //         break;
+    //     case 3:
+    //         console.log('Wednesday');
+    //         break;
+    //     case 4:
+    //         console.log('Thursday');
+    //         break;
+    //     case 5:
+    //         console.log('Friday');
+    //         break;
+    //     case 6:
+    //         console.log('Saturday');
+    //         break;
+    //     case 7:
+    //         console.log('Sunday')
+    // }
+
+
+
+
+    //     5) Користувач вводить або має два числа.
+    //         Потрібно знайти та вивести максимальне число з тих двох .
+    //         Також потрібно врахувати коли введені рівні числа
+
+    // let a = 1;
+    // let b = 2;
+    //
+    // if ( a > b ) {
+    //     console.log(a);
+    // }else if ( a < b ) {
+    //     console.log(b);
+    //     } else if ( a === b ){
+    //     console.log("choose another number");
+    //     }else {
+    //     console.log('you did not choose another number');
+    // }
+
+
+   //       6) є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
+    //       за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
+
+    let x ;
+
+    if ( x  ){
+
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>
