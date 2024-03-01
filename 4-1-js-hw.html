@@ -23,21 +23,25 @@
 
     // 2) створити функцію яка обчислює та повертає площу кола з радіусом r
 
-
-
+    // function areaOfCircle(r) {
+    //     return 3.14 * r;
+    // }
+    // console.log(areaOfCircle(256));
 
 
 
     // 3) створити функцію яка обчислює та повертає площу циліндру висотою h, та радіуcом r
 
-
-
-
+    // function cylinder(h, r) {
+    //    return 2 * 3.14 * r *( h + r);
+    // }
+    //
+    // console.log(cylinder(10,2));
 
     // 4) створити функцію яка приймає масив та виводить кожен його елемент
 
     // let arr1 = [1,45,'Ivan',true,32,76,'Max',12,43,false,'Mark',21,76];
-
+    //
     // function arrVis(arr) {
     //     let item;
     //     for (item of arr) {
@@ -45,8 +49,8 @@
     //     }
     // }
     //
-    // // arrVis(arr1);
-    // // arrVis(arr2);
+    // arrVis(arr1);
+
 
 
     // 5) створити функцію яка створює параграф з текстом. Текст задати через аргумент
@@ -112,32 +116,78 @@
     //             document.write(`<oi>${writerKey} : ${writer[writerKey]}; </oi>`)
     //             document.write(`</ul>`)
     //     }
-    //
     // }
+    //
     // writersCount(writers);
 
     // 10) створити функцію яка повертає найменьше число з масиву
 
+    // let arrOfNumbers = [9,10,8,11,7,12,6,13,5,14,4,15,3,16,2,17,1,18];
+    // function minNum(arr) {
+    //     let minNumb = arr[0];
+    //     for (let i = 1; i < arr.length; i++) {
+    //         if (arr[i] < minNumb) {
+    //             minNumb = arr[i]
+    //         }
+    //     }
+    //     return minNumb;
+    // }
+    // console.log(minNum(arrOfNumbers));
 
     // 11) створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+
+    // function sumOfArr(arr) {
+    //     let sum = 0;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         sum += arr[i];
+    //     }
+    //     return sum;
+    // }
+    // let arrOfNumbers = [9,10,8,11,7,12,6,13,5,14,4,15,3,16,2,17,1,18];
+    // console.log(sumOfArr(arrOfNumbers));
 
 
     // 12) створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах
     // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+    // function swap(arr,ind1, ind2) {
+    //
+    //     let temp = arr[ind1];
+    //     arr[ind1] = arr[ind2];
+    //     arr[ind2] = temp;
+    //     return arr;
+    // }
+    // let arr3 = [1,2,3,4];
+    // console.log(swap(arr3,0,1));
 
 
     // 13) Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
     // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
-
-
-
-
-
-
-
-
-
+    //
+    // function exchange(sumUAH,Currency) {
+    //
+    //     let cash = [
+    //         {currency: "USD", value:40},
+    //         {currency: "EUR", value:42},
+    //     ];
+    //
+    //     let result = [];
+    //
+    //     for (let cash1 of cash) {
+    //         if (Currency === 'USD' && cash1.currency === 'USD') {
+    //             result.push(sumUAH / cash1.value);
+    //         }else if (Currency === 'EUR' && cash1.currency === 'EUR') {
+    //             result.push(sumUAH / cash1.value);
+    //         }
+    //     }
+    //     return result;
+    // }
+    //
+    // let someUAH = exchange(440,'USD');
+    // console.log(someUAH);
+    // let uaInEur = exchange(4242,'EUR');
+    // console.log(uaInEur);
+    //
 
 </script>
 </body>
