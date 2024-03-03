@@ -77,23 +77,22 @@
 
     // function ulList(txt, liCount) {
     //     document.write(`<ul>`)
-    //     document.write(`<li>${txt}</li>`);
-    //     document.write(`<li>${txt}</li>`);
-    //     document.write(`<li>${txt}</li>`);
     //     for (let i = 0; i < liCount; i++) {
     //         document.write(`<li>${txt}</li>`);
     //     }
     //     document.write(`</ul>`)
     // }
     //
-    // ulList('lorem',12);
+    // ulList('lorem',8);
 
     // 8) створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
     // function liOfArr(arr) {
+    //     document.write(`<ul>`)
     //     for (let itemArr of arr) {
     //         document.write(`<li>${itemArr}</li>`)
     //     }
+    //     document.write(`</ul>`)
     // }
     //
     // let arr2 = [true,'Nika',243,653,123,false,'Hello',456,'cat123', 129,'Vika',false,543,652];
@@ -162,8 +161,10 @@
 
     // 13) Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
     // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
-
     //
+    //
+    // 13 переробив
+    // -----------------було----------------------
     // function exchange(sumUAH,Currency) {
     //
     //     let cash = [
@@ -182,12 +183,26 @@
     //     }
     //     return result;
     // }
-    //
     // let someUAH = exchange(440,'USD');
     // console.log(someUAH);
     // let uaInEur = exchange(4242,'EUR');
     // console.log(uaInEur);
+
+    // -----------------стало----------------------
     //
+    // function exchange(sumUAH, currencyValues, exchangeCurrency) {
+    //     for (values1 of currencyValues) {
+    //         if ( exchangeCurrency === 'USD' && values1.currency === 'USD') {
+    //             console.log(sumUAH / values1.value);
+    //         } else if ( exchangeCurrency === 'EUR' && values1.currency === 'EUR') {
+    //             console.log(sumUAH / values1.value);
+    //         }
+    //     }
+    // }
+    // exchange(840,[{currency:'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD');
+    // exchange(84,[{currency:'USD', value: 40}, {currency: 'EUR', value: 42}], 'EUR');
+    //
+
 
 </script>
 </body>
