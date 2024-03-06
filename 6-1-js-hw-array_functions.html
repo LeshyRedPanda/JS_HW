@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array_functions</title>
+</head>
+<body>
+
+
+<script >
+    // 1) Знайти та вивести довижину настипних стрінгових значень
+    // 'hello world', 'lorem ipsum', 'javascript is cool'
+
+    // let str1 = ['hello world', 'lorem ipsum', 'javascript is cool'];
+    // console.log(str1[0].length);
+    // console.log(str1[1].length);
+    // console.log(str1[2].length);
+
+
+    // 2) Перевести до великого регістру наступні стрінгові значення
+    // 'hello world', 'lorem ipsum', 'javascript is cool'
+
+
+    // let strArr = ['hello world', 'lorem ipsum', 'javascript is cool'];
+    // let string1 = 'hello world';
+    // console.log(string1.toUpperCase());
+    // let string2 = 'lorem ipsum';
+    // console.log(string2.toUpperCase());
+    // let string3 = 'javascript is cool';
+    // console.log(string3.toUpperCase());
+    // console.log(' ')
+    // console.log(strArr[0].toUpperCase(),strArr[1].toUpperCase(),strArr[2].toUpperCase())
+    // let upperArr = strArr.forEach((el) => console.log(el.toUpperCase()));
+
+
+    // 3) Перевести до нижнього регістру настипні стрінгові значення
+    // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
+
+    // let upperArray = ['HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'];
+    // console.log(upperArray[0].toLowerCase());
+    // console.log(upperArray[1].toLowerCase());
+    // console.log(upperArray[2].toLowerCase());
+    // console.log(' ');
+    // let lowerArr = upperArray.forEach((it) => console.log(it.toLowerCase()) );
+
+
+    // 4) Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+
+    // let str11 = ' dirty string   ';
+    // console.log(str11.substring(1,str11.length - 3));
+
+
+    // 5) Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+    //     let str = 'Ревуть воли як ясла повні';
+    // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+
+//     const strToArr = (el) => el.split(' ');
+//     let str22 = 'Ревуть воли як ясла повні';
+//     let newArrStr = strToArr(str22);
+//     console.log(newArrStr);
+// //-----------------------------------------
+//
+//     console.log(str22.split(' '));
+//
+//     console.log(strToArr(str22));
+
+
+    // 6) є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+
+    // let numArr = [10,8,-7,55,987,-1011,0,1050,0];
+    // let newNumArr = numArr.map((num) => `${num}`);
+    // console.log(newNumArr);
+
+
+    // 7) створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+    //     let nums = [11,21,3];
+    //
+    // // console.log(nums.sort((a,b) =>  a - b));
+    //
+    // const sortNum = (arr) => arr.sort((a, b) => a - b) ;
+    // // console.log(sortNum(nums));
+    //
+    // const sortNums = (arr, direction) => {
+    //     if (direction === 'ascending') {
+    //         arr = arr.sort((a, b) => a - b);
+    //     } else if (direction === 'descending') {
+    //         arr = arr.sort((a, b) => b - a);
+    //     } else {
+    //         arr = "please choose second argument 'ascending' or 'descending' ";
+    //     }
+    //     return arr;
+    // };
+    //
+    // console.log(sortNums(nums,'ascending'));
+    // console.log(sortNums(nums,'descendiiing'));
+    // console.log(sortNums(nums,'descending'));
+
+
+
+
+    // ==========================
+    // 8) є масив coursesAndDurationArray
+
+    // let coursesAndDurationArray = [
+    //     {title: 'JavaScript Complex', monthDuration: 5},
+    //     {title: 'Java Complex', monthDuration: 6},
+    //     {title: 'Python Complex', monthDuration: 6},
+    //     {title: 'QA Complex', monthDuration: 4},
+    //     {title: 'FullStack', monthDuration: 7},
+    //     {title: 'Frontend', monthDuration: 4}
+    // ];
+    // // -- відсортувати його за спаданням за monthDuration
+    // console.log(coursesAndDurationArray.sort((a, b) =>  a.monthDuration - b.monthDuration));
+    //
+    // // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+    // console.log(coursesAndDurationArray.filter((month) => month.monthDuration > 5));
+    //
+    // // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+    //
+    // let newCoursesArr = coursesAndDurationArray.map((item,index) => {
+    //     return {
+    //         id: index,
+    //         courseTitle: item.title,
+    //         coursesDuration: item.monthDuration,
+    //     };
+    // });
+    //
+    // console.log(newCoursesArr);
+    // //-----------------v.2-----------------
+    // let newCourse2 = coursesAndDurationArray.map((item,index) => ({id:index,course:item.title,duration:item.monthDuration}) )
+    // console.log(newCourse2);
+
+    // =========================
+    //  9)  описати колоду карт (від 6 до туза без джокерів)
+    //
+    // {
+    //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
+    //         value: '', // '6'-'10','jack','queen','king', 'ace','joker'
+    //     color:'', // 'red','black'
+    // }
+
+
+
+    // let cardSuits = ['spade','clubs', 'diamond','heart'];
+    // let cardValues = ['6','7','8','9','10','jack','queen','king','ace'];
+    //
+    // let newCards = () => {
+    //     let cards = [];
+    //     for (const cardSuit of cardSuits) {
+    //         for (const cardValue of cardValues) {
+    //             cards.push({cardSuit:cardSuit,cardValue:cardValue});
+    //         }
+    //     }
+    //     // //cards.map(item => item.cardSuit === 'spade' || item.cardSuit === 'clubs' ? item.color = 'black' : item.color = 'red');
+    //     cards.map(item =>{
+    //         if (item.cardSuit === 'spade' || item.cardSuit === 'clubs') {
+    //             item.color = 'black';
+    //         } else {
+    //             item.color = 'red';
+    //         }
+    //     })
+    //     return cards;
+    // };
+    // console.log(newCards());
+    // let newCardsArr = newCards();
+
+
+    // //- знайти піковий туз
+
+    // newCardsArr.map((item => {
+    //     if (item.cardSuit === 'spade' && item.cardValue === "ace" ) {
+    //         console.log(item);
+    //     }
+    // }));
+
+
+    // //- всі шістки
+
+    // let card666 =[];
+    // console.log(card666)
+    // newCardsArr.map((num)=>{
+    //     if (num.cardValue === 6) {
+    //         card666.push(num)
+    //     }
+    // })
+
+    // //- всі червоні карти
+
+    // let redCards =[];
+    // console.log(redCards)
+    // newCardsArr.map((red) =>{
+    //     if (red.color === 'red') {
+    //         redCards.push(red);
+    //     }
+    // })
+
+    // //- всі буби
+
+    // let diamonds1 = [];
+    // console.log(diamonds1);
+    //
+    // newCardsArr.map((diamonds) =>{
+    //     if (diamonds.cardSuit === 'diamond') {
+    //         diamonds1.push(diamonds)
+    //     }
+    // })
+
+
+    // //- всі трефи від 9 та більше
+
+    // let clubs1 = [];
+    // console.log(clubs1);
+    //
+    // newCardsArr.map((clubs) => {
+    //     if (clubs.cardSuit === 'clubs' && clubs.cardValue !=='6' && clubs.cardValue !=='7' && clubs.cardValue !=='7' && clubs.cardValue !=='8') {
+    //         clubs1.push(clubs);
+    //     }
+    // })
+
+
+
+    // =========================
+    //  10)
+    //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
+    // {
+    //     spades:[],
+    //     diamonds:[],
+    //     hearts:[],
+    //     clubs:[]
+    // }
+    // let newCardsArr = newCards();
+    // let suits ={
+    //         spades:[],
+    //         diamonds:[],
+    //         hearts:[],
+    //         clubs:[]
+    // } ;
+    //
+    // newCardsArr.reduce((accumulator,card) => {
+    //         if (card.cardSuit === 'clubs') {
+    //             suits.clubs.push(card);
+    //         }else if (card.cardSuit === 'heart') {
+    //             suits.hearts.push(card);
+    //         }else if (card.cardSuit === 'diamond') {
+    //            suits.diamonds.push(card);
+    //         } else {
+    //             suits.spades.push(card);
+    //         }
+    //
+    //         return accumulator;
+    //     },
+    //     [[],[],[],[]]
+    // );
+    //
+    // console.log(suits.clubs);
+    // console.log(suits.hearts);
+    // console.log(suits.diamonds);
+    // console.log(suits.spades);
+
+
+
+
+    // =========================
+    //  11)   взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
+    // --написати пошук всіх об'єктів, в який в modules є sass
+    // --написати пошук всіх об'єктів, в який в modules є docker
+    //
+
+    // const findCoursesWithModule = (courses, moduleToFind) => {
+    //     return courses.filter(course => course.modules.includes(moduleToFind));
+    // };
+    //
+    // const coursesArray = [
+    //     {
+    //         title: 'JavaScript Complex',
+    //         monthDuration: 5,
+    //         hourDuration: 909,
+    //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    //     },
+    //     {
+    //         title: 'Java Complex',
+    //         monthDuration: 6,
+    //         hourDuration: 909,
+    //         modules: ['html',
+    //             'css',
+    //             'js',
+    //             'mysql',
+    //             'mongodb',
+    //             'angular',
+    //             'aws',
+    //             'docker',
+    //             'git',
+    //             'java core',
+    //             'java advanced']
+    //     },
+    //     {
+    //         title: 'Python Complex',
+    //         monthDuration: 6,
+    //         hourDuration: 909,
+    //         modules: ['html',
+    //             'css',
+    //             'js',
+    //             'mysql',
+    //             'mongodb',
+    //             'angular',
+    //             'aws',
+    //             'docker',
+    //             'python core',
+    //             'python advanced']
+    //     },
+    //     {
+    //         title: 'QA Complex',
+    //         monthDuration: 4,
+    //         hourDuration: 909,
+    //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    //     },
+    //     {
+    //         title: 'FullStack',
+    //         monthDuration: 7,
+    //         hourDuration: 909,
+    //         modules: ['html',
+    //             'css',
+    //             'js',
+    //             'mysql',
+    //             'mongodb',
+    //             'react',
+    //             'angular',
+    //             'aws',
+    //             'docker',
+    //             'git',
+    //             'node.js',
+    //             'python',
+    //             'java']
+    //     },
+    //     {
+    //         title: 'Frontend',
+    //         monthDuration: 4,
+    //         hourDuration: 909,
+    //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    //     }
+    // ];
+    //
+    // const coursesWithSass = findCoursesWithModule(coursesArray, 'sass');
+    // console.log(coursesWithSass);
+    //
+    // const coursesWithDocker = findCoursesWithModule(coursesArray, 'docker');
+    // console.log(coursesWithDocker);
+
+
+</script>
+
+</body>
+</html>
