@@ -51,7 +51,8 @@
 
     // let str11 = ' dirty string   ';
     // console.log(str11.substring(1,str11.length - 3));
-
+    // // // -------------v.2 with trim------------
+    // console.log(str11.trim())
 
     // 5) Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
     //     let str = 'Ревуть воли як ясла повні';
@@ -144,28 +145,29 @@
 
 
 
-    // let cardSuits = ['spade','clubs', 'diamond','heart'];
-    // let cardValues = ['6','7','8','9','10','jack','queen','king','ace'];
-    //
-    // let newCards = () => {
-    //     let cards = [];
-    //     for (const cardSuit of cardSuits) {
-    //         for (const cardValue of cardValues) {
-    //             cards.push({cardSuit:cardSuit,cardValue:cardValue});
-    //         }
-    //     }
-    //     // //cards.map(item => item.cardSuit === 'spade' || item.cardSuit === 'clubs' ? item.color = 'black' : item.color = 'red');
-    //     cards.map(item =>{
-    //         if (item.cardSuit === 'spade' || item.cardSuit === 'clubs') {
-    //             item.color = 'black';
-    //         } else {
-    //             item.color = 'red';
-    //         }
-    //     })
-    //     return cards;
-    // };
+    let cardSuits = ['spade','clubs', 'diamond','heart'];
+    let cardValues = ['6','7','8','9','10','jack','queen','king','ace'];
+
+    let newCards = () => {
+        let cards = [];
+        for (const cardSuit of cardSuits) {
+            for (const cardValue of cardValues) {
+                cards.push({cardSuit:cardSuit,cardValue:cardValue});
+            }
+        }
+        // //cards.map(item => item.cardSuit === 'spade' || item.cardSuit === 'clubs' ? item.color = 'black' : item.color = 'red');
+        cards.map(item =>{
+            if (item.cardSuit === 'spade' || item.cardSuit === 'clubs') {
+                item.color = 'black';
+            } else {
+                item.color = 'red';
+            }
+        })
+        return cards;
+    };
     // console.log(newCards());
-    // let newCardsArr = newCards();
+    let newCardsArr = newCards();
+    // console.log(newCardsArr)
 
 
     // //- знайти піковий туз
@@ -175,17 +177,40 @@
     //         console.log(item);
     //     }
     // }));
+    // //-----------------------------------------------------v.2----------------------------------------
+
+    // let spadeAce = newCardsArr.filter(item => item.cardSuit === 'spade' && item.cardValue === 'ace');
+    // console.log(spadeAce);
 
 
     // //- всі шістки
 
     // let card666 =[];
-    // console.log(card666)
+
     // newCardsArr.map((num)=>{
     //     if (num.cardValue === 6) {
     //         card666.push(num)
     //     }
     // })
+    // console.log(card666);
+    // //----------------------------------------------------correction----------------------------------
+
+    // let newCards666 = [];
+    // newCardsArr.filter((card) => {
+    //     if (card.cardValue === '6') {
+    //         newCards666.push(card)
+    //     }
+    // })
+    // console.log(newCards666)
+    // //----------------------------------------------------or------------------------------------------
+    // let cardsOnly6 = newCardsArr.filter(six => six.cardValue === '6')
+    // console.log(cardsOnly6);
+
+    // //-----------------------------------------------------v.2----------------------------------------
+
+    // let onlySixes = newCardsArr.filter(nums => nums.cardValue === '6');
+    // console.log(onlySixes);
+
 
     // //- всі червоні карти
 
@@ -196,6 +221,11 @@
     //         redCards.push(red);
     //     }
     // })
+    // //-------------------------------------------v.2----------------------------------------
+
+    // let onlyRedCards = newCardsArr.filter(redCard => redCard.color === 'red');
+    // console.log(onlyRedCards);
+
 
     // //- всі буби
 
@@ -207,6 +237,11 @@
     //         diamonds1.push(diamonds)
     //     }
     // })
+
+    // //-------------------------------------------v.2----------------------------------------
+
+    // let diamondsOnly = newCardsArr.filter(diamond => diamond.cardSuit === 'diamond');
+    // console.log(diamondsOnly);
 
 
     // //- всі трефи від 9 та більше
@@ -220,7 +255,12 @@
     //     }
     // })
 
+    // //-------------------------------------------v.2----------------------------------------
 
+    // let clubsOnly = newCardsArr.filter(card => card.cardSuit === 'clubs' &&
+    //     ['9','10','jack','queen','king','ace'].includes(card.cardValue));
+    //
+    // console.log(clubsOnly);
 
     // =========================
     //  10)
@@ -348,6 +388,9 @@
     //
     // const coursesWithDocker = findCoursesWithModule(coursesArray, 'docker');
     // console.log(coursesWithDocker);
+
+
+
 
 
 </script>
