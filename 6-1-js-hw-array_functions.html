@@ -18,6 +18,10 @@
     // console.log(str1[0].length);
     // console.log(str1[1].length);
     // console.log(str1[2].length);
+    //
+    // let strLength = str1.map(item => item.length);
+    // console.log(strLength)
+
 
 
     // 2) Перевести до великого регістру наступні стрінгові значення
@@ -35,6 +39,15 @@
     // console.log(strArr[0].toUpperCase(),strArr[1].toUpperCase(),strArr[2].toUpperCase())
     // let upperArr = strArr.forEach((el) => console.log(el.toUpperCase()));
 
+    // let toUp = strArr.map(item => item.toUpperCase())
+    // const toUpFn = (strArr) =>{
+    //     console.log(strArr.map(item => item.toUpperCase()))
+    // }
+    // console.log(toUp)
+    //
+    // const strToUpper = (string) => string.toUpperCase()
+    // console.log(strToUpper('hello'))
+
 
     // 3) Перевести до нижнього регістру настипні стрінгові значення
     // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
@@ -46,6 +59,18 @@
     // console.log(' ');
     // let lowerArr = upperArray.forEach((it) => console.log(it.toLowerCase()) );
 
+    // function toLower(string) {
+    //     return string.toLowerCase()
+    // }
+    //
+    // console.log(toLower('HELLO'));
+    //
+    // const toLow = (string) => string.toLowerCase()
+    // console.log(toLow('HELLO'))
+    //
+    // const arrTolow = (arr) => arr.map(item => item.toLowerCase())
+    // console.log(arrTolow(upperArray))
+
 
     // 4) Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 
@@ -54,14 +79,20 @@
     // // // -------------v.2 with trim------------
     // console.log(str11.trim())
 
-    // 5) Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+    // 5) Напишіть функцію stringToArray(str), яка перетворює рядок на масив слів.
     //     let str = 'Ревуть воли як ясла повні';
-    // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+    // let arr = stringToArray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
 
-//     const strToArr = (el) => el.split(' ');
-//     let str22 = 'Ревуть воли як ясла повні';
-//     let newArrStr = strToArr(str22);
-//     console.log(newArrStr);
+    // const strToArr = (el) => el.split(' ');
+    // let str22 = 'Ревуть воли як ясла повні';
+    // let newArrStr = strToArr(str22);
+    // console.log(newArrStr);
+
+    // function strToArr2(string) {
+    //     return string.split(' ')
+    // }
+
+    // console.log(strToArr2(str22))
 // //-----------------------------------------
 //
 //     console.log(str22.split(' '));
@@ -75,6 +106,9 @@
     // let newNumArr = numArr.map((num) => `${num}`);
     // console.log(newNumArr);
 
+    // const numToString = (arr) => arr.map(item => item.toString())
+    //
+    // console.log(numToString(numArr))
 
     // 7) створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
     //     let nums = [11,21,3];
@@ -145,28 +179,28 @@
 
 
 
-    let cardSuits = ['spade','clubs', 'diamond','heart'];
-    let cardValues = ['6','7','8','9','10','jack','queen','king','ace'];
-
-    let newCards = () => {
-        let cards = [];
-        for (const cardSuit of cardSuits) {
-            for (const cardValue of cardValues) {
-                cards.push({cardSuit:cardSuit,cardValue:cardValue});
-            }
-        }
-        // //cards.map(item => item.cardSuit === 'spade' || item.cardSuit === 'clubs' ? item.color = 'black' : item.color = 'red');
-        cards.map(item =>{
-            if (item.cardSuit === 'spade' || item.cardSuit === 'clubs') {
-                item.color = 'black';
-            } else {
-                item.color = 'red';
-            }
-        })
-        return cards;
-    };
-    // console.log(newCards());
-    let newCardsArr = newCards();
+    // let cardSuits = ['spade','clubs', 'diamond','heart'];
+    // let cardValues = ['6','7','8','9','10','jack','queen','king','ace'];
+    //
+    // let newCards = () => {
+    //     let cards = [];
+    //     for (const cardSuit of cardSuits) {
+    //         for (const cardValue of cardValues) {
+    //             cards.push({cardSuit:cardSuit,cardValue:cardValue});
+    //         }
+    //     }
+    //     // //cards.map(item => item.cardSuit === 'spade' || item.cardSuit === 'clubs' ? item.color = 'black' : item.color = 'red');
+    //     cards.map(item =>{
+    //         if (item.cardSuit === 'spade' || item.cardSuit === 'clubs') {
+    //             item.color = 'black';
+    //         } else {
+    //             item.color = 'red';
+    //         }
+    //     })
+    //     return cards;
+    // };
+    // // console.log(newCards());
+    // let newCardsArr = newCards();
     // console.log(newCardsArr)
 
 
@@ -390,10 +424,11 @@
     // console.log(coursesWithDocker);
 
 
-
+    // // ---------------------------------------------------------------------
 
 
 </script>
+
 
 </body>
 </html>
