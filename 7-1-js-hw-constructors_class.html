@@ -93,13 +93,13 @@
     // console.log(clientsArr);
 
     // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
-
+    //
     // let sortClientsByOrder = clientsArr.sort((a, b) => {
     //     return a.order.length - b.order.length
     // });
     // console.log(sortClientsByOrder);
-
-
+    //
+    //
     // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
     //     -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
     //     -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
@@ -108,42 +108,40 @@
     //     -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
     
     // function Car1(carModel, factory, productionYear, maxSpeed, engineCapacity) {
-    //     return {
-    //         carModel,
-    //         factory,
-    //         productionYear,
-    //         maxSpeed,
-    //         engineCapacity,
+    //     this.carModel = carModel ;
+    //     this.factory = factory ;
+    //     this.productionYear = productionYear ;
+    //     this.maxSpeed = maxSpeed ;
+    //     this.engineCapacity = engineCapacity ;
     //
-    //         drive() {       // // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+    //         this.drive = function () {       // // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
     //             console.log('Going with speed : ' + this.maxSpeed + ' p/h')
-    //         },
-    //         info() {      // // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+    //         };
+    //         this.info = function () {      // // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
     //             console.log(
     //                 'Model : ' + this.carModel + ', ' +
     //                             'Factory address : ' + this.factory + ', ' +
     //                             'Production year: ' + this.productionYear + ', ' +
     //                             'Max Speed : ' + this.maxSpeed + ', ' +
     //                             'Engine Capacity : ' + this.engineCapacity)
-    //         },
-    //         increaseMaxSpeed(newSpeed) {  // // - increaseMaxSpeed (newSpeed) -підвищує значення максимальної швидкості на значення newSpeed
-    //             console.log(this.maxSpeed + newSpeed)
-    //         },
-    //         changeYear(newValue) {  // // -- changeYear (newValue) - змінює рік випуску на значення newValue
+    //         };
+    //             this.increaseMaxSpeed = function (newSpeed) {  // // - increaseMaxSpeed (newSpeed) -підвищує значення максимальної швидкості на значення newSpeed
+    //             this.maxSpeed += newSpeed
+    //             console.log('Max speed increased to: ' + this.maxSpeed )
+    //         };
+    //             this.changeYear = function (newValue) {  // // -- changeYear (newValue) - змінює рік випуску на значення newValue
     //             this.productionYear = newValue;
-    //         },
-    //         addDriver(name,drivingSchool,experienceAges) {   // // addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-    //             this.driver = [{
+    //         };
+    //             this.addDriver = function (name,drivingSchool,experienceAges) {   // // addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+    //             this.driver = {
     //                 'Driver name' : name,
     //                 'Driving School' : drivingSchool,
-    //                 'Driving experience' : experienceAges}]
+    //                 'Driving experience' : experienceAges}
     //             console.log(this.driver)
-    //         },
-    //
-    //     }
+    //         };
     // }
-    //
-    // let dasAuto = Car1('VW T5','Volkswagen,Heinrich-Nordhoff-Straße,Wolfsburg',2015,170,2500)
+    // //
+    // let dasAuto = new Car1('VW T5','Volkswagen,Heinrich-Nordhoff-Straße,Wolfsburg',2015,170,2500)
     // console.log(dasAuto)
     // // // їдемо зі швидкістю
     // dasAuto.drive()
@@ -156,7 +154,8 @@
     // console.log(dasAuto)
     // // приймає об'єкт який "водій"
     // dasAuto.addDriver('Sebastien Ogier','vwTeam',16)
-    // console.log(dasAuto)
+    // // console.log(dasAuto)
+    // console.log(dasAuto.driver)
 
 
 
