@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>9-2-Events</title>
+</head>
+<body>
+
+<h1>page 2</h1>
+
+
+
+
+<script>
+    // Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
+
+    function crazyPrinter() {
+        let timeDate = JSON.parse(localStorage.getItem('timeAndDate'));
+        // console.log(typeof timeDate);
+        // console.log(timeDate[0])
+
+        let ol1 = document.createElement('ol');
+
+        document.body.appendChild(ol1);
+
+        for (const timeDateElement of timeDate) {
+            console.log(timeDateElement)
+
+            let li1 = document.createElement('li');
+
+            ol1.appendChild(li1);
+
+            li1.innerText = `visit time ${timeDateElement}`;
+        }
+
+    }
+
+    crazyPrinter();
+
+
+</script>
+
+</body>
+</html>
