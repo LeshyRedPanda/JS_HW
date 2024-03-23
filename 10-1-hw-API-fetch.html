@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API-fetch</title>
+    <style>
+      #productsWrap p{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: cursive;
+          border: 1px solid #2f487f;
+      }#productsWrap img{
+          height: 400px;
+          border: 1px solid #2f487f;
+       }
+
+
+    /*   recipes */
+
+      .recipesWrap {
+          background: rgba(245, 222, 179, 0.37);
+          font-family: cursive;
+          color: rgba(8, 115, 236, 0.91);
+
+      }
+
+      .imgDish {
+          width: 300px;
+          height: 300px;
+      }
+
+    /*  lvl 3 users */
+      .usersWrap {
+          font-family: Candara  ;
+          color: rgba(11, 182, 182, 0.84);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+
+    </style>
+</head>
+<body>
+<!--lvl 1-->
+
+<!--<div id="productsWrap">-->
+<!--    <div id = productsWrap2></div>-->
+<!--</div>-->
+<!--lvl 1 end-->
+
+<!--lvl 2-->
+
+<!--<div class="recipesWrap"></div>-->
+
+<!--lvl 2 end-->
+
+<!--lvl 3  users.html  -->
+
+
+
+<!--lvl 3 end-->
+
+
+
+
+<script>
+    // LVL 1
+    // - взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини. Відобразити всі поля кожної корзини.
+
+
+    // fetch('https://dummyjson.com/carts')
+    //     .then(res => res.json())
+    //     .then(({carts} )=> {
+    //         // console.log(carts)
+    //         for (const cart of carts) {
+    //             const { id, products, total, discountedTotal, userId, totalProducts, totalQuantity } = cart;
+    //             let wrap = document.getElementById('productsWrap');
+    //             let p1 = document.createElement('p');
+    //             p1.innerText = `id : ${id}`;
+    //             //products
+    //             let p2 = document.createElement('p');
+    //             let p3 = document.createElement('p');
+    //             let p4 = document.createElement('p');
+    //             let p5 = document.createElement('p');
+    //             let p6 = document.createElement('p');
+    //             let p7 = document.createElement('p');
+    //             let p8 = document.createElement('p');
+    //             let imgProd = document.createElement('img');
+    //             let p9 = document.createElement('p');
+    //             let p10 = document.createElement('p');
+    //             let p11 = document.createElement('p');
+    //             let p12 = document.createElement('p');
+    //             let p13 = document.createElement('p');
+    //             let brbr1 = document.createElement('br')
+    //
+    //             p9.innerText =`total : ${total}`
+    //             p10.innerText =`discountedTotal : ${discountedTotal}`
+    //             p11.innerText =`userId : ${userId}`
+    //             p12.innerText =`totalProducts : ${totalProducts}`
+    //             p13.innerText =`totalQuantity :${totalQuantity}`
+    //             //
+    //             wrap.append(p1,p2,p3,p4,p5,p6,p7,p8,imgProd,p9,p10,p11,p12,p13,brbr1,);
+    //
+    //             // console.log(wrap)
+    //
+    //             // console.log(products)
+    //             for (const product of products) {
+    //                 const { id, title, price, quantity, total, discountPercentage, discountedPrice, thumbnail } = product;
+    //                 // console.log(price)
+    //                 p2.innerText = `product id :${id}`;
+    //                 p3.innerText = `product title :${title}`;
+    //                 p4.innerText = `product price :${price}`;
+    //                 p5.innerText = `product quantity :${quantity}`;
+    //                 p6.innerText = `product total :${total}`;
+    //                 p7.innerText = `product discountPercentage  :${discountPercentage}`;
+    //                 p8.innerText = `product discountedPrice :${discountedPrice}`;
+    //                 imgProd.src = thumbnail;
+    //             }
+    //         }
+    //     });
+
+
+    //    LVL 2
+    //     - взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути список під час відображення.
+
+    // fetch('https://dummyjson.com/recipes')
+    //     .then(res => res.json())
+    //     .then(({recipes}) => {
+    //         for (const recipe of recipes) {
+    //             const { id, name, ingredients, instructions, prepTimeMinutes, cookTimeMinutes, servings, difficulty, cuisine, caloriesPerServing, tags, userId, image, rating, reviewCount, mealType } = recipe;
+    //             // console.log(name);
+    //             //wrap
+    //             let recipesWrap = document.createElement('div');
+    //             recipesWrap.classList.add('recipesWrap');
+    //             document.body.appendChild(recipesWrap);
+    //
+    //
+    //             //name
+    //             let hName = document.createElement('h3');
+    //             hName.classList.add('divName');
+    //             document.body.appendChild(recipesWrap);
+    //             let nameP = document.createElement('p');
+    //             nameP.innerText =`Name of the dish : ${name}`
+    //             hName.appendChild(nameP);
+    //
+    //
+    //             // ingredients
+    //             let ingredientsWrap = document.createElement('div');
+    //             ingredientsWrap.classList.add('ingredientsWrap');
+    //             let ulIngredients = document.createElement('ul');
+    //             let ingredientName = document.createElement('h4');
+    //
+    //             ingredientName.innerText = `You need this ingredients :`
+    //
+    //             for (const ingredient of ingredients) {
+    //
+    //                 // console.log(ingredient);
+    //                 let liIngredient = document.createElement('li')
+    //                 liIngredient.innerText = ingredient;
+    //                 ulIngredients.appendChild(liIngredient);
+    //             }
+    //             ingredientsWrap.append(ingredientName,ulIngredients);
+    //
+    //             // instructions
+    //             let instructionsWrap = document.createElement('div');
+    //             instructionsWrap.classList.add('instructionsWrap');
+    //             let olInstructions = document.createElement('ol');
+    //             let hInstructions = document.createElement('h4');
+    //
+    //             hInstructions.innerText = `How to cook :`
+    //
+    //             for (const instruction of instructions) {
+    //
+    //                 let liInstructions = document.createElement('li');
+    //                 liInstructions.innerText = `${instruction}`
+    //                 olInstructions.appendChild(liInstructions);
+    //             }
+    //             let aboutCooking = document.createElement('p');
+    //
+    //             aboutCooking.innerText = `About the dish : prepare time : ${prepTimeMinutes}, cooking time : ${cookTimeMinutes}, servings : ${servings}, difficulty : ${difficulty}, cuisine : ${cuisine}, caloriesPerServing : ${caloriesPerServing} , and this dish is best for  ${mealType}`
+    //
+    //             instructionsWrap.append(hInstructions,olInstructions,aboutCooking);
+    //
+    //             //image
+    //             let imgDiv = document.createElement('div');
+    //             let imgH = document.createElement('h4')
+    //             imgH.innerText = `If you did everything right now you can eat something like that :`
+    //             let dishImg = document.createElement('img');
+    //             dishImg.classList.add('imgDish')
+    //             dishImg.src = image;
+    //
+    //             imgDiv.append(imgH,dishImg);
+    //
+    //             //tags
+    //             let tagsDiv = document.createElement('div');
+    //             let tagsP = document.createElement('p');
+    //             // console.log(tags);
+    //
+    //             tagsDiv.appendChild(tagsP);
+    //             let divDevInfo = document.createElement('div');
+    //             let pDevInfo = document.createElement('p');
+    //             for (const tagsPElement of tags) {
+    //                 tagsP.innerText = `Best tags for your dish in instagram ${tags}`
+    //             }
+    //
+    //             //id,userId,rating, reviewCount
+    //
+    //             pDevInfo.innerText = `Dish id : ${id}, userId : ${userId}, Dish rating : ${rating}, Reviews : ${reviewCount} `
+    //
+    //             divDevInfo.appendChild(pDevInfo);
+    //
+    //             recipesWrap.append(hName,ingredientsWrap,instructionsWrap,imgDiv,tagsDiv,divDevInfo);
+    //
+    //         }
+    //     });
+
+
+    // LVL 3
+    //     - зробити файл users.html
+    // з ендпоінту http://jsonplaceholder.typicode.com/users отримати всіх користувачів
+    //     вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
+    // при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів)
+    // отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX   де ХХХ - айді користувача)
+
+
+
+    // fetch('https://jsonplaceholder.typicode.com/users')
+    //     .then(response => response.json())
+    //     .then(users => {
+    //         let usersWrap = document.createElement('div');
+    //         usersWrap.classList.add('usersWrap');
+    //         document.body.appendChild(usersWrap);
+    //
+    //         for (const user of users) {
+    //             const { id, name} = user;
+    //
+    //             let userDiv = document.createElement('div');
+    //             let ulUser = document.createElement('ul');
+    //             let liUser = document.createElement('li');
+    //             let hrefUser = document.createElement('a')
+    //
+    //             liUser.innerText =`user Id : ${id} | User Name : ${name}`;
+    //             // console.log(user.name)
+    //
+    //             // href
+    //             hrefUser.innerText = `click here if you want see more info`
+    //             // hrefUser.href = `10-2-user_details.html`
+    //             hrefUser.addEventListener('click',() =>{
+    //                 location.href ='10-2-user_details.html?id=' + id;
+    //             })
+    //
+    //             ulUser.append(liUser,hrefUser);
+    //             userDiv.appendChild(ulUser);
+    //
+    //             usersWrap.appendChild(userDiv);
+    //         }
+    //     });
+
+
+
+</script>
+
+</body>
+</html>

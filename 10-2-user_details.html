@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Details</title>
+    <style>
+        .userWrap {
+            font-family: Candara  ;
+            color: rgba(21, 115, 115, 0.74);
+            border: 1px solid darkcyan;
+            width: 400px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<script>
+
+    //button
+    let btn = document.createElement('button')
+    document.body.appendChild(btn);
+    btn.innerText = 'back to users list'
+    // console.log(btn);
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.href = '10-1-hw-API-fetch.html';
+    });
+
+    // при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів)
+
+    console.log(location);
+
+    const userId = new URL(location.href).searchParams.get('id');
+    // console.log(userId);
+    let getUrl = 'https://jsonplaceholder.typicode.com/users/'+userId;
+    // console.log(getUrl);
+    fetch(getUrl).then(res => res.json())
+        .then(user1 => {
+            // console.log(user1);
+            let divInfoWrap = document.createElement('div');
+            divInfoWrap.classList.add('userWrap');
+            document.body.appendChild(divInfoWrap);
+            function createP(txt) {
+                let p = document.createElement('p');
+                p.innerText = txt;
+                divInfoWrap.appendChild(p);
+            }
+
+            const { id, name, username, email, address, phone, website, company, } = user1;
+
+            const {street,suite,city,zipcode,geo,} = address;
+            // console.log(street);
+            const {lat,lng} = geo;
+            console.log(lat,lng);
+            const {name: companyName,catchPhrase,bs} = company;
+            // console.log(name);
+
+            createP(`User id : ${id}`);
+            createP(`Name : ${name}`);
+            createP(`User Name : ${username}`);
+            createP(`User email : ${email}`);
+            createP(`Street : ${street}`);
+            createP(`Suite : ${suite}`);
+            createP(`User city : ${city}`);
+            createP(`User zipcode : ${zipcode}`);
+            createP(`geo/lat  : ${lat}`);
+            createP(`geo/lng : ${lng}`);
+            createP(`User phone : ${phone}`);
+            createP(`User website : ${website}`);
+            createP(`Company Name : ${companyName}`);
+            createP(`Catch Phrase : ${catchPhrase}`);
+            createP(`BS : ${bs}`);
+        });
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
