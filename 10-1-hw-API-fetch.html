@@ -18,6 +18,11 @@
           border: 1px solid #2f487f;
        }
 
+      .brbr {
+          background: #2f487f;
+
+      }
+
 
     /*   recipes */
 
@@ -43,16 +48,16 @@
           align-items: center;
       }
 
+
     </style>
 </head>
 <body>
 <!--lvl 1-->
 
-<!--<div id="productsWrap">-->
-<!--    <div id = productsWrap2></div>-->
-<!--</div>-->
+<div id="productsWrap">
+    <div id = productsWrap2></div>
+</div>
 <!--lvl 1 end-->
-
 <!--lvl 2-->
 
 <!--<div class="recipesWrap"></div>-->
@@ -79,51 +84,47 @@
     //         // console.log(carts)
     //         for (const cart of carts) {
     //             const { id, products, total, discountedTotal, userId, totalProducts, totalQuantity } = cart;
+    //
     //             let wrap = document.getElementById('productsWrap');
     //             let p1 = document.createElement('p');
+    //             let brbr1 = document.createElement('p');
+    //             let brbr2 = document.createElement('p');
+    //             brbr1.classList.add('brbr')
+    //             wrap.appendChild(brbr1);
     //             p1.innerText = `id : ${id}`;
-    //             //products
-    //             let p2 = document.createElement('p');
-    //             let p3 = document.createElement('p');
-    //             let p4 = document.createElement('p');
-    //             let p5 = document.createElement('p');
-    //             let p6 = document.createElement('p');
-    //             let p7 = document.createElement('p');
-    //             let p8 = document.createElement('p');
-    //             let imgProd = document.createElement('img');
-    //             let p9 = document.createElement('p');
-    //             let p10 = document.createElement('p');
-    //             let p11 = document.createElement('p');
-    //             let p12 = document.createElement('p');
-    //             let p13 = document.createElement('p');
-    //             let brbr1 = document.createElement('br')
-    //
-    //             p9.innerText =`total : ${total}`
-    //             p10.innerText =`discountedTotal : ${discountedTotal}`
-    //             p11.innerText =`userId : ${userId}`
-    //             p12.innerText =`totalProducts : ${totalProducts}`
-    //             p13.innerText =`totalQuantity :${totalQuantity}`
-    //             //
-    //             wrap.append(p1,p2,p3,p4,p5,p6,p7,p8,imgProd,p9,p10,p11,p12,p13,brbr1,);
+    //             wrap.appendChild(p1);
     //
     //             // console.log(wrap)
-    //
     //             // console.log(products)
     //             for (const product of products) {
     //                 const { id, title, price, quantity, total, discountPercentage, discountedPrice, thumbnail } = product;
-    //                 // console.log(price)
-    //                 p2.innerText = `product id :${id}`;
-    //                 p3.innerText = `product title :${title}`;
-    //                 p4.innerText = `product price :${price}`;
-    //                 p5.innerText = `product quantity :${quantity}`;
-    //                 p6.innerText = `product total :${total}`;
-    //                 p7.innerText = `product discountPercentage  :${discountPercentage}`;
-    //                 p8.innerText = `product discountedPrice :${discountedPrice}`;
+    //                 // console.log(product)
+    //
+    //                 // product info
+    //                 createP(wrap,`product id :${id}`);
+    //                 createP(wrap,`product title :${title}`);
+    //                 createP(wrap,`product price :${price}`);
+    //                 createP(wrap,`product quantity :${quantity}`);
+    //                 createP(wrap,`product total :${total}`);
+    //                 createP(wrap,`product discountPercentage  :${discountPercentage}`);
+    //                 // img
+    //                 createP(wrap,`product discountedPrice :${discountedPrice}`);
+    //                 let imgProd = document.createElement('img');
     //                 imgProd.src = thumbnail;
+    //                 wrap.appendChild(imgProd);
     //             }
+    //             createP(wrap,`total : ${total}`);
+    //             createP(wrap,`discountedTotal : ${discountedTotal}`);
+    //             createP(wrap,`totalProducts : ${totalProducts}`);
+    //             createP(wrap,`userId : ${userId}`);
+    //             createP(wrap,`totalQuantity :${totalQuantity}`);
     //         }
     //     });
-
+    // function createP(wrap,txt) {
+    //     let p = document.createElement('p');
+    //     p.innerText = txt;
+    //     wrap.appendChild(p);
+    // }
 
     //    LVL 2
     //     - взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути список під час відображення.
